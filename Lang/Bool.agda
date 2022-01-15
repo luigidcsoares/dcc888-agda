@@ -16,7 +16,7 @@ data _⇓_ : Term → Term → Set where
                            → (if t₁ then t₂ else t₃) ⇓ v
   B-NotTrue  : ∀ {t} →   t ⇓ true
                     -------------------
-                     → (not t) ⇓ false
+                     → not t ⇓ false
   B-NotFalse : ∀ {t} →   t ⇓ false
                     -------------------
-                     → (not t) ⇓ true
+                     → not t ⇓ true
